@@ -1,10 +1,16 @@
+
+body{
+    background-color: #f9f7fe;
+}
+
 .container {
-    max-width: 40%;
+    max-width: 600px;
     border: 10px;
-    margin: 0 auto;
-    border-radius: 40px;
-    background-color: lightseagreen;
-    padding: 20px;
+    margin: 38px auto;
+    border-radius: 16px;
+    box-shadow: 0 30px 50px rgba(65, 50, 100, 8.08);
+    background-color: lightcyan;
+    padding: 30px;
 }
 
 h1 {
@@ -23,28 +29,33 @@ p {
 
 .current-temperature {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .current-temperature-value {
-    font-size: 50px;
+    font-size: 88px;
 }
 
 .current-temperature-unit {
-    font-size: 45px;
+    font-size: px;
 }
 
+
 .search-input {
-    padding: 8px;
-    margin-top: 20px;
-    border-radius: 30px;
+    padding: 15px 20px;
+    width: 86%;
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    background-color: #f9f7fe;
 }
 
 .submit-button {
-    padding: 8px 20px;
-    margin-top: 10px;
-    border-radius: 30px;
-    color: brown;
-    font-weight: bold;
-    cursor: pointer;
+    padding: 15px 30px;
+    margin-left: 5px;
+    border-radius: 8px;
+    background-color: rgba(238, 104, 216, 0.74);
+    color: white;
+    font-size: 16px;
+    border: none;
 }
