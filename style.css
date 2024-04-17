@@ -27,19 +27,29 @@ p {
     font-weight: bold;
 }
 
-.current-temperature {
+.temperature {
     display: flex;
-    justify-content: space-between;
+    
 }
-
+.current-temperature-icon{
+    font-size: 44px;
+    margin-top: 22px;
+}
 .current-temperature-value {
     font-size: 88px;
+    margin-left: 10px;
 }
 
 .current-temperature-unit {
-    font-size: px;
+    font-size: 88px;
+    
 }
-
+.weather-details{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 588px;
+    
+}
 
 .search-input {
     padding: 15px 20px;
