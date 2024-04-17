@@ -21,9 +21,9 @@ let now = new Date();
 
         h1Element.innerHTML = response.data.city;
         temperatureElement.innerHTML = temperature;
-        description.innerHTML = response.data.condition.description;
-        humidity.innerHTML = `${response.data.temperature.humidity}%,`;
-        windSpeed.innerHTML = `${response.data.wind.speed}Km/h`;
+        description.innerHTML = `,${response.data.condition.description}`;
+        humidity.innerHTML = `Humidity: ${response.data.temperature.humidity}%,`;
+        windSpeed.innerHTML = `Wind Speed: ${response.data.wind.speed}Km/h`;
         icon.innerHTML = `<img src="${response.data.condition.icon_url}"class="current-temperature-icon"/>`;
 
 
@@ -39,21 +39,21 @@ let now = new Date();
 
         axios.get(apiUrl).then(showTemperature);
 
-         let newTime = `${day}, ${date} ${month} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ,`;
+        let newTime = `${day}, ${date} ${month} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
         p.innerHTML = newTime;
     }
-    
-    
+
+   
+
     let form = document.querySelector("#search-form");
     form.addEventListener("submit", search);
 
-    const searchInput = document.getElementById("search-input");
-    const city = document.getElementById("city");
-    
-    
-    searchInput.addEventListener("input", () => {
-      
-      city.textContent = searchInput.value;
-    });
 
-    
+    const searchInput = document.getElementById("search-input");
+const city = document.getElementById("city");
+
+
+searchInput.addEventListener("input", () => {
+  
+  city.textContent = searchInput.value;
+});
