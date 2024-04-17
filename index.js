@@ -22,8 +22,8 @@ let now = new Date();
         h1Element.innerHTML = response.data.city;
         temperatureElement.innerHTML = temperature;
         description.innerHTML = `,${response.data.condition.description}`;
-        humidity.innerHTML = `Humidity: ${response.data.temperature.humidity}%,`;
-        windSpeed.innerHTML = `Wind Speed: ${response.data.wind.speed}Km/h`;
+        humidity.innerHTML = ` ${response.data.temperature.humidity}%,`;
+        windSpeed.innerHTML = `${response.data.wind.speed}km.h`;
         icon.innerHTML = `<img src="${response.data.condition.icon_url}"class="current-temperature-icon"/>`;
 
 
@@ -33,21 +33,26 @@ let now = new Date();
         event.preventDefault();
         let searchInput = document.querySelector("#search-input");
         let city = searchInput.value;
+         
 
         let apiKey = "3d4faf1712bac890aob409810t89d488";
         let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
         axios.get(apiUrl).then(showTemperature);
 
+
+        
+
         let newTime = `${day}, ${date} ${month} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
         p.innerHTML = newTime;
     }
 
-   
+    
+    
 
     let form = document.querySelector("#search-form");
     form.addEventListener("submit", search);
-
+    
 
     const searchInput = document.getElementById("search-input");
 const city = document.getElementById("city");
