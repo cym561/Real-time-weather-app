@@ -32,16 +32,15 @@ p {
     
 }
 .current-temperature-icon{
-    font-size: 44px;
+    font-size: 33px;
     margin-top: 22px;
 }
 .current-temperature-value {
-    font-size: 88px;
-    margin-left: 10px;
+    font-size: 77px;
 }
 
 .current-temperature-unit {
-    font-size: 88px;
+    font-size: 77px;
     
 }
 .weather-details{
