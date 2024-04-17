@@ -32,7 +32,8 @@ p {
     
 }
 .current-temperature-icon{
-    font-size: 33px;
+    height: 49px;
+    width: 49px;
     margin-top: 22px;
 }
 .current-temperature-value {

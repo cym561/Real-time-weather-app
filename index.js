@@ -17,12 +17,16 @@ let now = new Date();
         let description = document.querySelector("#description");
         let humidity = document.querySelector("#humidity");
         let windSpeed = document.querySelector("#wind-speed");
+        let icon = document.querySelector("#icon");
 
         h1Element.innerHTML = response.data.city;
         temperatureElement.innerHTML = temperature;
         description.innerHTML = response.data.condition.description;
         humidity.innerHTML = `${response.data.temperature.humidity}%,`;
         windSpeed.innerHTML = `${response.data.wind.speed}Km/h`;
+        icon.innerHTML = `<img src="${response.data.condition.icon_url}"class="current-temperature-icon"/>`;
+
+
     }
 
     function search(event) {
