@@ -28,15 +28,14 @@ let now = new Date();
 
         axios.get(apiUrl).then(showTemperature);
 
-        let newTime = `${day}, ${date} ${month} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+         let newTime = `${day}, ${date} ${month} ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
         p.innerHTML = newTime;
     }
 
     let form = document.querySelector("#search-form");
     form.addEventListener("submit", search);
 
-
-    const searchInput = document.getElementById("search-input");
+const searchInput = document.getElementById("search-input");
 const city = document.getElementById("city");
 
 
@@ -44,3 +43,4 @@ searchInput.addEventListener("input", () => {
   
   city.textContent = searchInput.value;
 });
+    
